@@ -23,14 +23,9 @@ public class ReadThread implements Runnable {
 		try {
 			while(true) {
 				String s=(String)nc.read();
-                //Person person=new Person(s);
-                //person.setFirstName(s);
                 table.put(s,nc);
                 Person person=new Person(new SimpleStringProperty(s),nc,main);
-                //main.c.tableView.getItems().add(person);
                 main.persons.add(person);
-
-                //main.c.output.setText(s);
 				System.out.println(s);
 			}
 		} catch(Exception e) {

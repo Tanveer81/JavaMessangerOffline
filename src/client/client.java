@@ -23,6 +23,4 @@ public class client implements Runnable {
         }
     }
 
-
-
 }

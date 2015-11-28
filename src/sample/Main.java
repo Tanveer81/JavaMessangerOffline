@@ -32,8 +32,6 @@ public class Main extends Application {
         stage.setScene(new Scene(root, 600, 400));
         stage.show();
 
-
-
         Thread t=new Thread(new server(this));
         t.start();
     }
@@ -42,7 +40,6 @@ public class Main extends Application {
         this.person=person;
         b=true;
     }
-
 
     public static void main(String[] args) {
         launch(args);

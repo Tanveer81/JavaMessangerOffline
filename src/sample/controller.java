@@ -26,7 +26,6 @@ public class controller {
     @FXML
     void sendMessage(ActionEvent event) {
         main.b=true;
-        //main.master=textField.getText();
     }
 
     @FXML
@@ -42,12 +41,6 @@ public class controller {
         firstNameCol.setMinWidth(100);
         firstNameCol.setCellValueFactory(
                 new PropertyValueFactory<Person, String>("firstName"));
-        //firstNameCol.setCellValueFactory(new PropertyValueFactory<>("Client"));
-        //firstNameCol.setCellFactory(TextFieldTableCell.<Person>forTableColumn());
-        /*TableColumn firstNameCol = new TableColumn("First Name");
-        firstNameCol.setMinWidth(100);
-        firstNameCol.setCellValueFactory(
-                new PropertyValueFactory<Person, String>("firstName"));*/
 
         ///button column starts
         TableColumn<Person, String> actionCol = new TableColumn<>("Send");
@@ -73,12 +66,8 @@ public class controller {
                                                 Person person = getTableView().getItems().get(getIndex());
                                                 String name = person.getFirstName() + " " ;
                                                 main.write(person);
-                                                /*ObservableList<Person> productSelected, allProducts;
-                                                allProducts = tableView.getItems();
-                                                productSelected = tableView.getSelectionModel().getSelectedItems();
-                                                productSelected.forEach(allProducts::remove);*/
-                                                //deleting button
                                                 main.persons.remove(person);
+                                                textArea.setText(null);
                                             }
                                     );
                                     setGraphic(btn);
@@ -105,10 +94,6 @@ public class controller {
         tableView.setEditable(true);
         tableView.setItems(main.persons);
         button.setVisible(false);
-
-        //Person p = new Person("A", "B", "C@D.com");
-        //tableView.getItems().add(p);
-
     }
 
     void showTable() {
@@ -124,7 +109,6 @@ public class controller {
     }
         //Person p = new Person("A", "B", "C@D.com");
         //tableView.getItems().add(p);
-
-    }
+}
 
 

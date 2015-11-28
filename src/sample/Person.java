@@ -23,11 +23,10 @@ public class Person {
     public String getFirstName() {
         return firstName.get();
     }
+
     public void setFirstName(String fName) {
         firstName.set(fName);
     }
-
-
 
 
     public String toString() {

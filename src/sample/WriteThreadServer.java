@@ -15,7 +15,6 @@ public class WriteThreadServer implements Runnable {
     public Hashtable<String, NetworkUtil> table;
     String s;
 
-
     public WriteThreadServer(Hashtable<String, NetworkUtil>table, String name,Main main) {
         this.name=name;
         this.table=table;
@@ -26,12 +25,9 @@ public class WriteThreadServer implements Runnable {
 
     public void run() {
         try {
-            ///Scanner input=new Scanner(System.in);
             while(true) {
-                 //s=input.nextLine();
                 s=main.c.textArea.getText();
-
-               if (main.b){
+                if (main.b){
                    String cName=main.person.getFirstName();
                     nc = table.get(cName);
 
@@ -45,6 +41,5 @@ public class WriteThreadServer implements Runnable {
         } catch(Exception e) {
            System.out.println (e);
         }
-        //nc.closeConnection();
     }
 }
